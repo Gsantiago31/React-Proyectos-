@@ -16,9 +16,11 @@ export const NoteView = () => {
 
     const dispatch = useDispatch();
 
-    const { active:note, messageSaved, isSaving} = useSelector( state => state.journal );
+    const { active:note, messageSaved, isSaving } = useSelector( state => state.journal );
 
     const { body, title, date, onInputChange, formState } = useForm( note );
+
+    console.log(note);
 
     const dateString = useMemo(() => {
         const newDate = new Date( date );
@@ -128,7 +130,7 @@ export const NoteView = () => {
                     Borrar
                 </Button>
             </Grid>
-        <ImageGallery images={ note.imageUrls }/>
+            <ImageGallery images={ note.imageUrls } />
 
     </Grid>
   )
