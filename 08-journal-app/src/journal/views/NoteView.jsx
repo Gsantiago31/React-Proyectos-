@@ -20,7 +20,7 @@ export const NoteView = () => {
 
     const { body, title, date, onInputChange, formState } = useForm( note );
 
-    console.log(note);
+
 
     const dateString = useMemo(() => {
         const newDate = new Date( date );
